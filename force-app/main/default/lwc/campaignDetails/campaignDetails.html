@@ -1,0 +1,27 @@
+<template>
+    <lightning-card variant="Narrow" title="Campaign Details" icon-name="standard:campaign">
+        <lightning-layout vertical-align="center">
+        <div class="slds-var-p-around_medium">
+        <lightning-record-view-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+            mode="view"
+            
+        >
+            <div class="slds-grid">
+                <div class="slds-col">
+                    
+                    <lightning-output-field field-name={campaignNameField}></lightning-output-field>
+                    <lightning-output-field field-name={campaignTargetDonationAmountField}></lightning-output-field>
+                    <lightning-output-field field-name={campaignAchievedDonationAmountField}></lightning-output-field>
+                    <lightning-output-field field-name={campaignRemainingDonationAmountField}></lightning-output-field>
+                    <lightning-output-field field-name={campaignEndDateField}></lightning-output-field>
+
+                </div>
+            </div>
+        </lightning-record-view-form>
+        </div>
+    </lightning-layout>
+    </lightning-card>
+    
+</template>

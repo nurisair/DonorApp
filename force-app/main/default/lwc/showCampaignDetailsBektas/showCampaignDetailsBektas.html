@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Campaign Information" icon-name="standard:campaign">
+        <lightning-record-form
+            record-id={recordId}
+            object-api-name="Campaign"
+            columns="2"
+            mode="readonly"
+        >
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="Target_Donation_Amount__c"></lightning-input-field>
+            <lightning-input-field field-name="Achieved_Donation_Amount__c"></lightning-input-field>
+            <lightning-input-field field-name="Remaining_Donation_Amount__c"></lightning-input-field>
+            <lightning-input-field field-name="EndDate"></lightning-input-field>
+        </lightning-record-form>
+    </lightning-card>
+</template>

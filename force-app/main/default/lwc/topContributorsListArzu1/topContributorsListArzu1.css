@@ -1,0 +1,24 @@
+/* myComponent.css */
+
+.my-custom-datatable {
+    background-color: #e92c2c; /* Set your desired background color */
+    color: #333; /* Set the text color */
+}
+
+.my-custom-datatable td {
+    background-color: #cbd28a; /* Set your desired background color for table cells */
+}
+
+.my-custom-datatable th {
+    background-color: #b4e21f; /* Set your desired background color for table header */
+    color: #191919; /* Set the text color for table header */
+}
+
+.my-custom-card {
+    background-color: #ade92c; /* Set your desired background color */
+    color: #333; /* Set the text color */
+    div {
+        background-color: #2f2ce9; /* Set your desired background color */
+        color: #333; /* Set the text color */
+    }
+}

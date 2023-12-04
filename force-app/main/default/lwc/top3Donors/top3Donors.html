@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Top Donors TB" icon-name="standard:account">
+    <div class="container">
+        <h2>TOP DONORS TB</h2>
+        <ul>
+            <template for:each={topDonors} for:item="contributor">
+                <li key={contributor.Id}>{contributor.Name} - ${contributor.Total_Donation__c}</li>
+                
+            </template>
+        </ul>
+    </div>
+</lightning-card>
+</template>

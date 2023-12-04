@@ -1,0 +1,27 @@
+<template>
+    <lightning-card icon-name='action:share_thanks' size='x-small' title="Top Donors Bektas">
+        <div class="slds-m-around_medium">
+            <template if:true={topDonors}>
+                <ul>
+                    <template for:each={topDonors} for:item="donor">
+                        <li key={donor.Id} class="slds-media slds-item">
+                            <lightning-icon icon-name='action:share_thanks' size='x-small' class="slds-media__figure"></lightning-icon>
+                            <div class="slds-media__body">
+                                <span class="slds-p-right_xx_large slds-border_bottom slds-p-left_xx_large">{donor.Name}</span>
+                                <span class="slds-p-right_xx_large slds-float_right slds-p-left_xx_large">
+                                    <lightning-formatted-number
+                                            value={donor.Total_Donation__c}
+                                            format-style="currency">
+                                    </lightning-formatted-number>
+                                    </span>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <template if:true={error}>
+                <p>{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

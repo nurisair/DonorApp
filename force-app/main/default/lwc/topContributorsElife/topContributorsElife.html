@@ -1,0 +1,25 @@
+<template>
+    <lightning-card variant="Narrow" title="Top Donation Elife" icon-name="standard:reward">
+        <div class="slds-var-p-around_medium">
+            <template if:true={contributors}>
+                <div class="slds-p-around_medium">
+                <template for:each={contributors} for:item="donor">
+                    
+                    <div key={donor.Id} class="slds-grid slds-gutters" style="margin-bottom: 1rem; margin-left: 2rem;">
+                        <div class="slds-grid slds-grid_vertical-align-start slds-m-bottom_small">
+                            <lightning-icon icon-name="standard:thanks" size="small"></lightning-icon>
+                        </div>
+                        <div class="slds-col slds-size_5-of-12">
+                            <span><p>{donor.displayedName}</p></span>
+                        </div>
+                        <div class="slds-col slds-size_5-of-12">
+                            <p style="color: rgb(10, 183, 180);">${donor.Total_Donation__c}</p>
+                        </div>
+                    </div>
+                
+                </template>
+            </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
